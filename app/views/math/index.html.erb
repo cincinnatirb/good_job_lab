@@ -3,10 +3,12 @@
 <title>Math Page</title>
 </head>
 <body>
+<%= turbo_stream_from "pi", channel: PiChannel %>
+
 <h1>Math Page!</h1>
 
 <h2>Let's calculate Pi!</h2>
-<%= turbo_frame_tag "pi", src: "/pi_digits" do %>
+<%= turbo_frame_tag "pi" do %>
 Loading...
 <% end %>
 
