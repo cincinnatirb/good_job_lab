@@ -5,11 +5,13 @@
 <body>
 <h1>Pi Digits!</h1>
 
-<ul>
-  <% @strategy.results.each do |name, value| %>
+<%= turbo_frame_tag "pi" do %>
+  <ul>
+    <% @strategy.results.each do |name, value| %>
     <li><%= name %>: <%= value %></li>
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
+<% end %>
 
 </body>
 </html>

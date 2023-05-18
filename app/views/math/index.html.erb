@@ -1,0 +1,14 @@
+<html>
+  <head>
+<title>Math Page</title>
+</head>
+<body>
+<h1>Math Page!</h1>
+
+<h2>Let's calculate Pi!</h2>
+<%= turbo_frame_tag "pi", src: "/pi_digits" do %>
+Loading...
+<% end %>
+
+</body>
+</html>
