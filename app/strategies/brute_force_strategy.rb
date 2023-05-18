@@ -1,7 +1,7 @@
 class BruteForceStrategy
   attr_accessor :iterations
 
-  def initialize(iterations: 10)
+  def initialize(iterations: Rails.application.config.pi_iterations)
     @iterations = iterations
   end
 
