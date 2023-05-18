@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   get "/pi_digits", to: "pi_digits#index"
   get "/math", to: "math#index"
+
+  mount GoodJob::Engine => 'good_job'
+
   # Defines the root path route ("/")
   root "math#index"
 end
