@@ -3,6 +3,18 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.good_job.execution_mode = :external
+  config.good_job.enable_cron = true
+
+  config.good_job.cron = {
+    recalculate_pi_task: {
+      cron: "* * * * *",
+      class: "PiCalculationJob",
+      args: [],
+      kwargs: { strategy_classname: "brute_force", iterations: 90000000 },
+      set: { priority: -10 },
+      description: "Recalculate pi"
+    }
+  }
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development

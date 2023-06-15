@@ -74,4 +74,3 @@ group :test do
 end
 
 gem "good_job", "~> 3.15"
-gem "whenever", require: false
