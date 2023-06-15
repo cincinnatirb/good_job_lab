@@ -1,0 +1,1 @@
+* * * * * /bin/bash -l -c 'cd /Users/.../src/cincinnatirb/good_job_lab && bundle exec bin/rails runner -e production '\''PiCalculationJob.perform_later'\'''
